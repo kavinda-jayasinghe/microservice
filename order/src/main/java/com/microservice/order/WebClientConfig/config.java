@@ -1,2 +1,13 @@
-package com.microservice.order.WebClientConfig;public class config {
+package com.microservice.order.WebClientConfig;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.reactive.function.client.WebClient;
+
+@Configuration
+public class config {
+@Bean
+   public WebClient webClient(){
+    return WebClient.builder().build();
+}
 }
